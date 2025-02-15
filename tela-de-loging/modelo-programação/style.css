@@ -30,6 +30,7 @@ body{
     
 }
 .D{
+    overflow: hidden;
     background-color: var(--azul);
     width: 100%;
     height: 100%;
@@ -107,11 +108,12 @@ body{
             border-radius: 4px;
             margin-top: 20px;
             margin-bottom: 20px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.5s linear;
 
             &:hover{
                 background-color: #022669;
-                transition: 0.5s;
             }
         }
     }
@@ -153,7 +155,10 @@ body{
     .container{
         width: calc(100vw - 20px );
         height: 100vh;
-        flex: none;
+        
+    }
+    .E,.D{
+        height: 100vh;
     }
 }
 
