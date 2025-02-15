@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+.nav{
+    background-color: rgb(19, 19, 19);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 30px;
+    
+}
+.nav-list a{
+    color: #DDD;
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-list a:hover{
+    color: white;
+}
+/*FIM DO HEADER*/
+
+.main{
+    width: 100%;
+    background-color: black;
+    height: calc(100vh - 80px);
+    background-image: url(imagens/pexels-joshsorenson-1714208.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+.main h1{
+    color: white;
+     font-size: 54px;
+}
+.main p{
+    font-size: 24px;
+    font-style: italic;
+    color: rgb(32, 153, 223);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.call-to-action{
+    cursor: pointer;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: 0.8s;
+
+    &:hover{
+        transform: scale(1.1);
+        background-color: rgb(14, 129, 100);
+    }
+}
+.main a {
+    text-decoration: none;
+    color: black;
+}
+/*FIM DO MAIN*/
+
+/*INICIO DO SOBRE*/
+.sobre{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.sobre div{
+    max-width: 50%;
+    padding: 40px;
+}
+.sobre div h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.sobre img{
+    max-width: 450px;
+    max-height: 450px;
+    border-radius: 20px;
+}
+/*FIM DO SOBRE*/
+
+/*INICIO DE PROJETOS*/
+.projetos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+.projetos h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+.projetos p{
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.imgs-projeto{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgs-projeto img{
+    width: 22%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    opacity: 0.8;
+    transition: 0.8s;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.action{
+    background-color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: whitesmoke;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}
+/*FIM DE PROJETOS*/
+
+/*INICIO DO FOOTER*/
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 40px;
+}
+/*FIM DO FOOTER*/
+
+/*RESPONSIVIDADE*/
+@media (max-width: 1050px){
+    .main h1{
+        font-size: 45px;
+    }
+    .main p{
+        font-size: 20px;
+    }
+    .sobre{
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    .sobre div{
+        max-width: 80%;
+        &h2{
+            font-size: 45px;
+        }
+        &img{
+            width: 80%;
+            margin-top: 30px;
+        }
+    }
+    .projetos img{
+        width: 27.5%;
+    }
+    footer{
+        padding: 20px;
+        
+    }
+}
